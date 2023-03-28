@@ -16,7 +16,7 @@
 
     <!-- Google's MDL -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-light_green.min.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css" />
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./css/style.css">
@@ -31,29 +31,42 @@
     <!-- JavaScript -->
     <script src="./js/script.js"></script>
 
-      <!-- Container for web page content -->
-      <main class="mdl-layout__content" style = "padding-left:20px; padding-right:20px;">
+    <!-- Container for web page content -->
+    <main style = "padding-left:20px; padding-right:20px;">
+      
+      <!-- Web page heading -->
+      <h1>Calculating the Area of a Trapezoid with User Input</h1>
+            
+      <!-- Body text -->
+      <p>Welcome! This web page will use dimensions of your choice to calculate the area of a trapezoid. See the image below for the dimensions that need to be entered and the formula that will be used.</p>
 
-        <!-- Body text -->
-        <p>Welcome! Please enter the dimensions of a trapezoid as indicated below.</p>
-        <br>
-    
-        <!-- User input form -->
-        <form action="javascript:calculateAreaClicked()">
-          <label for="radiusOfCone">Radius of cone (in cm):</label>
-          <input type="number" step="0.01" id="radius-cone" placeholder="Radius in cm..."><br><br>
-          <label for="heightOfCone">Height of cone (in cm):</label>
-          <input type="number" step="0.01" id="height-cone" placeholder="Height in cm..."><br><br>
-          <input type="submit" value="Calculate!">
-        </form>
-  
-        <!-- Space for displaying user information -->
-        <div id="calculations">
-          <div id="volume-cone"></div>
-          <div id="surface-area-cone"></div>
-        </div>
-        <br>
-      </main>
-    </div>
+      <!-- Image -->
+      <img src="./images/area-of-trapezoid.png" alt="area trapezoid">
+      <br>
+      <br>
+
+      <!-- Body text -->
+      <p>Please fill in the form below to indicate the height and the lengths of sides a and b for a trapezoid.</p>
+          
+      <!-- User input form -->
+      <form action="javascript:calculateArea()">
+        <label for="height">Height of trapezoid (in cm):</label>
+        <input type="number" step="0.001" id="height" placeholder="Height (cm)..."><br><br>
+        <label for="side-a">Length of side A (in cm)</label>
+        <input type="number" step="0.001" id="side-a" placeholder="Length of side a (cm)..."><br><br>
+        <label for="side-b">Length of side B (in cm)</label>
+        <input type="number" step="0.001" id="side-b" placeholder="Length of side b (cm)..."><br><br>
+        <!-- Accent-colored raised button with ripple -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">Calculate Area!</button>
+      </form>
+      <br>
+
+      <!-- Space for displaying user information -->
+      <p>Results:</p>
+      <div id="calculations">
+        <div id="area-trapezoid"></div>
+      </div>
+      <br>
+    </main>
   </body>
 </html>
